@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Joseph McCourt's Galery</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/gallery.css" th:href="@{/css/gallery.css}" />
+</head>
+<body>
+<div id="header" th:replace="fragments/header :: header"></div>
+<div><img th:src="${link}"/></div>
+<div><span th:text="${place}"></span></div>
+<div><p th:each="line : ${poem}">
+<span th:text="${line}"></span><br/>
+</p></div>
+
+</body>
+</html>
