@@ -18,3 +18,9 @@ body {
 #menu div a{
 	color: dark-blue;
 }
+#secret {
+	text-decoration: none;
+	pointer-event: none;
+	color: black;
+	cursor: text;
+}
