@@ -17,13 +17,13 @@ public class MailClient {
         this.mailSender = mailSender;
     }
 	
-	public void prepareAndSend(String mail) {
+	public void prepareAndSend(String mail, String message) {
 	    MimeMessagePreparator messagePreparator = mimeMessage -> {
 	        MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
-	        messageHelper.setFrom("josephmccourt.nwp@gmail.com");
+	        messageHelper.setFrom("newworldphoto.ad@gmail.com");
 	        messageHelper.setTo(mail);
 	        messageHelper.setSubject("Witamy! New World Photo");
-	        messageHelper.setText("Test");
+	        messageHelper.setText(message);
 	    };
 	    try {
 	        mailSender.send(messagePreparator);
