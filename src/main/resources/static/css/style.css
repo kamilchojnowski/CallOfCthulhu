@@ -1,0 +1,20 @@
+body {
+	background-image: url('http://www.lighthouse-cove.com/images/home-banner-1.jpg');
+}
+#headline {
+	font-style: italic;
+   font-family: "Brush Script MT", cursive;; 
+   font-weight: 300;
+
+}
+#menu {
+	overflow: hidden;
+}
+#menu div {
+	font-style: black;
+	float: left;
+	margin-left: 10px;
+}
+#menu div a{
+	color: dark-blue;
+}
