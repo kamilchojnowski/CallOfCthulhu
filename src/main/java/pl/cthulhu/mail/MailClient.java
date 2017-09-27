@@ -17,12 +17,12 @@ public class MailClient {
         this.mailSender = mailSender;
     }
 	
-	public void prepareAndSend(String mail, String message) {
+	public void prepareAndSend(String mail, String title, String message) {
 	    MimeMessagePreparator messagePreparator = mimeMessage -> {
 	        MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage);
 	        messageHelper.setFrom("newworldphoto.ad@gmail.com");
 	        messageHelper.setTo(mail);
-	        messageHelper.setSubject("Witamy! New World Photo");
+	        messageHelper.setSubject(title);
 	        messageHelper.setText(message);
 	    };
 	    try {

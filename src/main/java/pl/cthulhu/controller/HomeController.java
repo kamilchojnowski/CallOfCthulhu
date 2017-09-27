@@ -31,13 +31,15 @@ public class HomeController {
 				+ "Spotykamy sie w każdy ostatni czwartek miesiąca w klubie The Spotted Cat.\n"
 				+ "Zapytaj barmana w rozmowie \"A czym jest prawda jeżeli nie ulotnością?\", zaprowadzi Cię.\n"
 				+ "Do zobaczenia!";
+		String title = "Witamy! New World Photo";
 		if(email.equals("josephmccourt.nwp@gmail.com")){
 			message = "Joseph...\n"
 					+ "Jeżeli znowu zapomniałeś dostępu do NASZYCH plików: kliknij na powitanie na stronie startowej (to z napisem\"Witaj Joseph\" czy jakoś tak).\n"
 					+ "A jeżeli to jakiś Twój żart to spadaj.\n"
 					+ "AD";
+			title = "Joseph...";
 		}
-		mailClient.prepareAndSend(email, message);
+		mailClient.prepareAndSend(email, title, message);
 		return "home";
 	}
 
