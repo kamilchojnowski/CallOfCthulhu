@@ -34,8 +34,8 @@ public class HomeController {
 		String title = "Witamy! New World Photo";
 		if(email.equals("josephmccourt.nwp@gmail.com")){
 			message = "Joseph...\n"
-					+ "Jeżeli znowu zapomniałeś dostępu do NASZYCH plików: kliknij na powitanie na stronie startowej (to z napisem\"Witaj Joseph\" czy jakoś tak).\n"
-					+ "A jeżeli to jakiś Twój żart to spadaj.\n"
+					+ "Jeżeli znowu zapomniałeś dostępu do swoich plików: kliknij na powitanie na stronie startowej (to z napisem\"Witaj Joseph\" czy jakoś tak). Login to twoje inicjały, a hasła nie pamiętam. Chyba nazwa miasta z twojej pierwszej wpadki.\n"
+					+ "A jeżeli to znowu jakiś twój żart to spadaj.\n"
 					+ "AD";
 			title = "Joseph...";
 		}

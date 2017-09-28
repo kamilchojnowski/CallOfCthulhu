@@ -5,6 +5,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class SecretController {
@@ -19,7 +20,7 @@ public class SecretController {
 	
 	@PostMapping("/login")
 	public String loginPost(@RequestParam String login, @RequestParam String password, Model model){
-		if(login.equals("JM") && password.equals("pass")){
+		if(login.equals("JM") && password.equals("Gardner")){
 			return "files/home";
 		}
 		model.addAttribute("msg", "Błędne dane");
@@ -39,6 +40,12 @@ public class SecretController {
 	@GetMapping("/futureCases")
 	public String futureCases(){
 		return "files/futureCases";
+	}
+	
+	@GetMapping("/case")
+	@ResponseBody
+	public String josephsCase(@RequestParam String name){
+		return name;
 	}
 	
 	

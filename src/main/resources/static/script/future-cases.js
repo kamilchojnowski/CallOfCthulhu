@@ -18,5 +18,5 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	$.playSound("https://www.soundjay.com/human/sounds/heartbeat-03.mp3");
 	setTimeout(function(){
 		$.stopSound();
-	},1500)
+	},2300)
 })
