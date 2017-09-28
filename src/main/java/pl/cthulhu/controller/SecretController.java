@@ -36,6 +36,12 @@ public class SecretController {
 		return "files/oldCases";
 	}
 	
+	@GetMapping("/futureCases")
+	public String futureCases(){
+		return "files/futureCases";
+	}
+	
+	
 	
 
 }
