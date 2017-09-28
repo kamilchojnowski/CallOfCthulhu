@@ -19,7 +19,7 @@ public class SecretController {
 	
 	@PostMapping("/login")
 	public String loginPost(@RequestParam String login, @RequestParam String password, Model model){
-		if(login.equals("login") && password.equals("pass")){
+		if(login.equals("JM") && password.equals("pass")){
 			return "files/home";
 		}
 		model.addAttribute("msg", "Błędne dane");

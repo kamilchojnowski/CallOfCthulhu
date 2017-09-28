@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>files</title>
+</head>
+<body>
+<form method="post">
+<div><p th:text="${msg}"></p></div>
+<div><label for="login">Login:</label><input id="login" name="login" type="text"/></div>
+<div><label for="password">Hasło:</label><input id="password" name="password" type="password"/></div>
+<div><input type="submit" value="Zaloguj"/></div>
+</form>
+
+</body>
+</html>
