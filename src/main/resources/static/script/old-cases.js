@@ -19,6 +19,12 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	        }
 	    });
 	})(jQuery);
+	window.addEventListener( "pageshow", function ( event ) {
+		  var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
+		  if ( historyTraversal ) {
+			  window.location.reload();
+		  }
+		});
 	var attr = "${oldCasesAttr}";
 	$.ajax({
 		url: "/attr",
@@ -26,7 +32,6 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		dataType: "text",
 		data: "data=oldCases",
 		success: function(data){
-			console.log(data);
 			if(data == "T"){
 				setTimeout(function(){
 					hideAndShow();

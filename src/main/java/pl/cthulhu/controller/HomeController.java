@@ -11,6 +11,8 @@ import pl.cthulhu.mail.MailClient;
 @Controller
 public class HomeController {
 	
+	public static String oldCaseAttr = "T";
+	
 	@Autowired
 	private MailClient mailClient;
 
