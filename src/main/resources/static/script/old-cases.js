@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded",function(event) {
 	var body = $("body");
 	var elements = $("body").find("div");
+	
 	function hideAndShow(){
 		$(elements).toggle();
 	}
+	
 	(function ($) {
 	    $.extend({
 	        playSound: function () {
@@ -19,13 +21,14 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	        }
 	    });
 	})(jQuery);
+	
 	window.addEventListener( "pageshow", function ( event ) {
 		  var historyTraversal = event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
 		  if ( historyTraversal ) {
 			  window.location.reload();
 		  }
 		});
-	var attr = "${oldCasesAttr}";
+	
 	$.ajax({
 		url: "/attr",
 		type: 'get',
