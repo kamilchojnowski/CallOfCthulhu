@@ -45,9 +45,22 @@ public class SecretController {
 	}
 	
 	@GetMapping("/case")
-	@ResponseBody
-	public String josephsCase(@RequestParam String name){
-		return name;
+	public String josephsCase(@RequestParam String name, Model model){
+		switch(name){
+		case "MerryLongherb":
+			model.addAttribute("name", "Merry Longherb");
+			break;              
+		case "CindyKidd":       
+			model.addAttribute("name", "Cindy Kidd");
+			break;              
+		case "CephalusVasilev": 
+			model.addAttribute("name", "Cephalus Vasilev");
+			break;              
+		case "JaneHostling":    
+			model.addAttribute("name", "Jane Hostling");
+			break;
+		}
+		return "files/case";
 	}
 	
 	@GetMapping("/attr")
