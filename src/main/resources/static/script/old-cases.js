@@ -4,6 +4,21 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	function hideAndShow(){
 		$(elements).toggle();
 	}
+	(function ($) {
+	    $.extend({
+	        playSound: function () {
+	            return $(
+	                   '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
+	                     + '<source src="' + arguments[0] + '" />'
+	                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
+	                   + '</audio>'
+	                 ).appendTo('body');
+	        },
+	        stopSound: function () {
+	            $(".sound-player").remove();
+	        }
+	    });
+	})(jQuery);
 	var attr = "${oldCasesAttr}";
 	$.ajax({
 		url: "/attr",
@@ -16,10 +31,14 @@ document.addEventListener("DOMContentLoaded",function(event) {
 				setTimeout(function(){
 					hideAndShow();
 					body.css("background-image", "url(\"http://assets.rebelcircus.com/blog/wp-content/uploads/2016/01/o-BLACK-EYED-CHILD-facebook.jpg\")");
+					$.playSound('http://soundbible.com/mp3/Children_Laughing-Mike_Koenig-575083331.mp3');
 					setTimeout(function(){
 						body.css("background-image", "");
 						hideAndShow();
-					}, 100);
+					}, 400);
+					setTimeout(function(){
+						$.stopSound();
+					}, 500);
 				}, 2000);
 			}
 		},
