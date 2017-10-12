@@ -49,15 +49,39 @@ public class SecretController {
 		switch(name){
 		case "MerryLongherb":
 			model.addAttribute("name", "Merry Longherb");
+			model.addAttribute("sex", "K");
+			model.addAttribute("age", "11");
+			model.addAttribute("place", "Gardner, Georgia");
+			model.addAttribute("when", "luty 2007");
+			model.addAttribute("why", "Obserwowałem ją dniami i nocami. Nie mogłem spać, jeść pić, wszystko we mnie wypełniało chore, płomienne pragnienie"
+					+ " jej niewinnego ciała. Jej skóra była zbyt gładka, jej ząbki zbyt proste, jej oczy zbyt głebokie i zbyt przypominające mi letnie niebo "
+					+ "odbite w stawie. Nienawidziłem jej z całego serca. Była idealna. Pewnej nocy zakradłem się do jej domu. Nie wiem co było z jej rodzicami, "
+					+ "wydawało mi się, że siedzą w salonie na dole. Widać Pan czuwał nade mną, bo kiedy wszedłem do jej pokoju, już spała. Brzydziłem się jej tak bardzo, że musiałem założyć rękawice i maskę, nawet jej zapach przyprawiał mnie o mdłosci."
+					+ " Wszystko zrobiłem książkowo: proś o łaskę Obecności, spójrz w oczy Wybrańca, podetnij gardło ale tak, aby krew wypływała powoli, Pochwyć, Złóż. I Oddaj. Miałem wpadkę. Wszystko zepsułem. Przez chwilę zapatrzyłem się w jej przerażone, zapłakane, nic nie rozumiejące oczy i nie udało mi się jej Oddać. Została tam. Panie wybacz mi.");
 			break;              
 		case "CindyKidd":       
 			model.addAttribute("name", "Cindy Kidd");
+			model.addAttribute("sex", "");
+			model.addAttribute("age", "");
+			model.addAttribute("place", "");
+			model.addAttribute("when", "");
+			model.addAttribute("why", "");
 			break;              
 		case "CephalusVasilev": 
 			model.addAttribute("name", "Cephalus Vasilev");
+			model.addAttribute("sex", "");
+			model.addAttribute("age", "");
+			model.addAttribute("place", "");
+			model.addAttribute("when", "");
+			model.addAttribute("why", "");
 			break;              
 		case "JaneHostling":    
 			model.addAttribute("name", "Jane Hostling");
+			model.addAttribute("sex", "");
+			model.addAttribute("age", "");
+			model.addAttribute("place", "");
+			model.addAttribute("when", "");
+			model.addAttribute("why", "");
 			break;
 		}
 		return "files/case";
