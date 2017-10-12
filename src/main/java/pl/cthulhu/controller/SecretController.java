@@ -56,31 +56,39 @@ public class SecretController {
 			model.addAttribute("why", "Obserwowałem ją dniami i nocami. Nie mogłem spać, jeść pić, wszystko we mnie wypełniało chore, płomienne pragnienie"
 					+ " jej niewinnego ciała. Jej skóra była zbyt gładka, jej ząbki zbyt proste, jej oczy zbyt głebokie i zbyt przypominające mi letnie niebo "
 					+ "odbite w stawie. Nienawidziłem jej z całego serca. Była idealna. Pewnej nocy zakradłem się do jej domu. Nie wiem co było z jej rodzicami, "
-					+ "wydawało mi się, że siedzą w salonie na dole. Widać Pan czuwał nade mną, bo kiedy wszedłem do jej pokoju, już spała. Brzydziłem się jej tak bardzo, że musiałem założyć rękawice i maskę, nawet jej zapach przyprawiał mnie o mdłosci."
-					+ " Wszystko zrobiłem książkowo: proś o łaskę Obecności, spójrz w oczy Wybrańca, podetnij gardło ale tak, aby krew wypływała powoli, Pochwyć, Złóż. I Oddaj. Miałem wpadkę. Wszystko zepsułem. Przez chwilę zapatrzyłem się w jej przerażone, zapłakane, nic nie rozumiejące oczy i nie udało mi się jej Oddać. Została tam. Panie wybacz mi.");
+					+ "wydawało mi się, że siedzą w salonie na dole. Widać Pan czuwał nade mną, bo kiedy wszedłem do jej pokoju, już spała. Brzydziłem się jej tak "
+					+ "bardzo, że musiałem założyć rękawice i maskę, nawet jej zapach przyprawiał mnie o mdłosci. Wszystko zrobiłem książkowo: proś o łaskę "
+					+ "Obecności, spójrz w oczy Wybrańca, podetnij gardło ale tak, aby krew wypływała powoli, Pochwyć, Złóż. I Oddaj. Miałem wpadkę. Wszystko "
+					+ "zepsułem. Przez chwilę zapatrzyłem się w jej przerażone, zapłakane, nic nie rozumiejące oczy, musiałem docisnąć mocniej dłonią jej usta i "
+					+ "nie udało mi się jej Oddać. Została tam. Panie wybacz mi.");
 			break;              
 		case "CindyKidd":       
 			model.addAttribute("name", "Cindy Kidd");
-			model.addAttribute("sex", "");
-			model.addAttribute("age", "");
-			model.addAttribute("place", "");
-			model.addAttribute("when", "");
-			model.addAttribute("why", "");
+			model.addAttribute("sex", "K");
+			model.addAttribute("age", "26");
+			model.addAttribute("place", "-");
+			model.addAttribute("when", "- (2010 ?)");
+			model.addAttribute("why", "Poznałem ją w barze. Nigdy nie miałem kłopotów z podobaniem się kobietom, a przynajmniej sporej części pijanych kobiet z barów."
+					+ " Tej wystarczyło kupić dwa drinki z wódką. Ja i mój urok osobisty. Zabrałem ją do siebie, przywitałem winem i rozpalonym kominkiem. Włączyłem "
+					+ "nastrojową muzykę i usiedliśmy na kanapie. Jeszcze wtedy chciała rozmawiać. Kobiety są niezwykle naiwne, prawda Alex? Każda myśli, że jej na pewno "
+					+ "nic nie grozi, że jak facet jest miły to na pewno wszystko będzie dobrze. Kiedy chciała już zacząć się pieprzyć, pozwoliłem jej myśleć, że o to mi chodzi. "
+					+ "Wiem, że to wbrew naszym zasadom ale mam nadzieję, że nie będziesz miał mi za złe. I tak, wiedziałem, że nie wystraszą jej nasze tatuaże, nie "
+					+ "pytaj nawet skąd. W każdym razie wszystko się udało, Oddałem ją. Pan zaśpiewał pieśń smutną i piękną, a w pieśni tej było wszytsko, czego nigdy "
+					+ "nie będzie.");
 			break;              
 		case "CephalusVasilev": 
 			model.addAttribute("name", "Cephalus Vasilev");
-			model.addAttribute("sex", "");
-			model.addAttribute("age", "");
-			model.addAttribute("place", "");
-			model.addAttribute("when", "");
-			model.addAttribute("why", "");
+			model.addAttribute("sex", "M");
+			model.addAttribute("age", "-");
+			model.addAttribute("place", "Abu Dulayq, Sudan");
+			model.addAttribute("when", "?? lipca 2012");
 			break;              
 		case "JaneHostling":    
-			model.addAttribute("name", "Jane Hostling");
-			model.addAttribute("sex", "");
-			model.addAttribute("age", "");
-			model.addAttribute("place", "");
-			model.addAttribute("when", "");
+			model.addAttribute("name", "Michał Bańka");
+			model.addAttribute("sex", "M");
+			model.addAttribute("age", "okaże się");
+			model.addAttribute("place", "prawdopodobnie bagna Big Branch");
+			model.addAttribute("when", "?? paziernika 2017");
 			model.addAttribute("why", "");
 			break;
 		}
