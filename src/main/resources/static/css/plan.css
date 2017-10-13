@@ -53,3 +53,7 @@ a {
 .logout { float:right; }
   
 .msgln { margin:0 0 2px 0; }
+
+textarea {
+	resize: none;
+}
