@@ -2,15 +2,24 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8"/>
-<title>files</title>
+<title>plan</title>
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/plan.css" th:href="@{/css/plan.css}" />
 </head>
 <body>
-<div id="data">
-<div class="single-data"><label>Imię: </label><label th:text="${name}"></label></div>
-<div><label>Płeć: </label><label th:text="${sex}"></label></div>
-<div><label>Wiek: </label><label th:text="${age}"></label></div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../../script/plan.js"></script>
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Welcome, JM<b></b></p>
+        <div style="clear:both"></div>
+    </div>
+<textarea id="chatbox"></textarea>
+<div id="message">
+	<textarea rows="1" cols="50" id="msg"></textarea>
+	<button id="submitmsg">Send</button>
 </div>
-<div id="place"><label>Miejsce: </label><label th:text="${place}"></label></div></body>
-<div id="when"><label>Kiedy: </label><label th:text="${when}"></label></div>
-<div id="why"><label th:text="${why}"></label></div>
+
+</div>
+</body>
 </html>
