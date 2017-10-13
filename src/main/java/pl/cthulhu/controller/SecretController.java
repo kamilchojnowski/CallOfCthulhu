@@ -82,6 +82,9 @@ public class SecretController {
 			model.addAttribute("age", "-");
 			model.addAttribute("place", "Abu Dulayq, Sudan");
 			model.addAttribute("when", "?? lipca 2012");
+			model.addAttribute("why","Cephalus był moim współpracownikiem. Zatrudniłem się w Walmarcie, rozkładaliśmy towar po godzinach. Był aspołeczny, trochę introwertyczny."
+					+ " Poiłem go czułymi słówkami, zgrywałem przyjaciela. W moich opowieściach stał się kimś więcej. Kierownikiem zmiany czy kimś takim. Wtedy namówiłem go na rzucenie pracy. "
+					+ "Reszta była formalnością: upiliśmy się trochę, poszedłem za nim do domu i Pan zaśpiewał swą pieśń.");
 			break;              
 		case "JaneHostling":    
 			model.addAttribute("name", "Michał Bańka");
@@ -89,7 +92,7 @@ public class SecretController {
 			model.addAttribute("age", "okaże się");
 			model.addAttribute("place", "prawdopodobnie bagna Big Branch");
 			model.addAttribute("when", "?? paziernika 2017");
-			model.addAttribute("why", "");
+			model.addAttribute("why", "Znalazłem nastepnego");
 			break;
 		}
 		return "files/case";
@@ -107,6 +110,11 @@ public class SecretController {
 		return "N";
 		}
 		return "Yup";
+	}
+	
+	@GetMapping("/plan")
+	public String plan(){
+		return "files/plan";
 	}
 	
 	
