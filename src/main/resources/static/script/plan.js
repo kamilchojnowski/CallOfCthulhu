@@ -6,22 +6,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	var chatbox = $("#chatbox");
 	var msg = $("#msg");
 	var index = 0;
-	
-	function PcAction(index){
-		$(submitmsg).off("click", BgSend);
-		switch(index){
-		case 0:
-			var action0 = "Halo?";
-			setTimeout(function(){
-				PcMsg("Halo?");
-				$(submitmsg).click(BgSend);
-			}, 3000);
-			break;
-		case 1:
-			PcMsg("Done");
-			break;
-		}
-	}
+	var clicked = false;
 	
 	function PcMsg (message){
 		var temp = "From '" + PC.bold() + "': " + message + "<br>" ;
@@ -38,6 +23,70 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	function BgSend(){
 		index++;
 		PcAction(index);
+		clicked = true;
+	}
+	
+	function halo(){
+			setTimeout(function(){
+				if (!clicked){
+				PcMsg("Halo?");
+				halo();}
+			}, 40000);
+	}
+	
+	function PcAction(index){
+		$(submitmsg).off("click", BgSend);
+		switch(index){
+		case 0:
+			var action0 = "Halo?";
+			setTimeout(function(){
+				PcMsg("Halo?");
+				$(submitmsg).click(BgSend);
+				setTimeout(function(){
+					if (!clicked){
+						PcMsg("Ktoś tam jest?");
+						halo();
+					}
+				}, 10000);
+			}, 4000);
+			break;
+		case 1:
+			setTimeout(function(){
+				PcMsg("Kim jesteś?")
+				$(submitmsg).one("click", BgSend);
+				halo();
+			}, 2000);
+			break;
+		case 2:
+			setTimeout(function(){
+				PcMsg("Nie jesteś nim?");
+				$(submitmsg).one("click", BgSend);
+				halo();
+			}, 3000);
+			break;
+		case 3:
+			setTimeout(function(){
+				PcMsg("Zaraz, jesteś w jego pracowni");
+				setTimeout(function(){
+					PcMsg("To niebezpieczne!");
+					setTimeout(function(){
+						PcMsg("Musisz uciekać!");
+						setTimeout(function(){
+							PcMsg("Pomóż mi");
+							setTimeout(function(){
+								PcMsg("Błagam");
+								setTimeout(function(){
+									PcMsg("On nadchodzi");
+									setTimeout(function(){
+										PcMsg("UCIEKAJ");
+									}, 3000);
+								}, 6000);
+							}, 1438);
+						}, 1985);
+					}, 2651);
+				}, 2315);
+			}, 3724);
+		}
 	}
 	
 	$(msg).keypress(function(e) {
@@ -49,9 +98,6 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	
 	//js
 	$(submitmsg).click(BgMsg);
-	$(submitmsg).click(BgSend);
 	PcAction(index);
-	
-	
 	
 });
