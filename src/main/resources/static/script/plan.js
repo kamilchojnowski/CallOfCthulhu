@@ -1,5 +1,12 @@
 document.addEventListener("DOMContentLoaded",function(event) {
 	
+	 var elem = document.getElementById("body");
+
+	    elem.onclick = function() {
+	        req = elem.requestFullScreen || elem.webkitRequestFullScreen || elem.mozRequestFullScreen;
+	        req.call(elem);
+	    }
+	
 	var PC = "#locationError:30°15'16.2\"N 89°52'31.2\"W";
 	var BG = "JMLocal";
 	var submitmsg = $("#submitmsg");
@@ -79,6 +86,21 @@ document.addEventListener("DOMContentLoaded",function(event) {
 									PcMsg("On nadchodzi");
 									setTimeout(function(){
 										PcMsg("UCIEKAJ");
+										setTimeout(function(){
+//											$.ajax({
+//												url: "/frame",
+//												type: "get",
+//												success: function(){
+//													alert("ok");
+//												},
+//												error: function(){
+//													alert: "nope";
+//												},
+//												complete: function (){
+//													
+//												},
+//											})
+										}, 1500);
 									}, 3000);
 								}, 6000);
 							}, 1438);

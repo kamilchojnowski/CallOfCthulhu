@@ -1,5 +1,11 @@
 package pl.cthulhu.controller;
 
+import java.awt.GraphicsDevice;
+import java.awt.GraphicsEnvironment;
+import java.awt.Window;
+
+import javax.swing.JFrame;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -115,6 +121,18 @@ public class SecretController {
 	@GetMapping("/plan")
 	public String plan(){
 		return "files/plan";
+	}
+	
+	@GetMapping("/frame")
+	public void frame(){
+		GraphicsDevice myDevice = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+		Window myWindow;
+
+		try {
+		    myDevice.setFullScreenWindow(myWindow);
+		} finally {
+		    myDevice.setFullScreenWindow(null);
+		}
 	}
 	
 	
