@@ -16,7 +16,7 @@ public class HomeController {
 	@Autowired
 	private MailClient mailClient;
 
-	@GetMapping({"", "/home", "/"})
+	@GetMapping({"", "/home"})
 	public String home(){
 		return "home";
 	}

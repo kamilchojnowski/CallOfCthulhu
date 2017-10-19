@@ -1,9 +1,5 @@
 package pl.cthulhu.controller;
 
-import java.awt.GraphicsDevice;
-import java.awt.GraphicsEnvironment;
-import java.awt.Window;
-
 import javax.swing.JFrame;
 
 import org.springframework.stereotype.Controller;
@@ -122,20 +118,5 @@ public class SecretController {
 	public String plan(){
 		return "files/plan";
 	}
-	
-	@GetMapping("/frame")
-	public void frame(){
-		GraphicsDevice myDevice = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-		Window myWindow;
-
-		try {
-		    myDevice.setFullScreenWindow(myWindow);
-		} finally {
-		    myDevice.setFullScreenWindow(null);
-		}
-	}
-	
-	
-	
 
 }
