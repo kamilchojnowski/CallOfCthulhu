@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		  }
 		});
 	
-	$.playSound("https://www.soundjay.com/human/sounds/heartbeat-03.mp3");
+	$.playSound("/sound/heartbeat.mp3");
 	setTimeout(function(){
 		$.stopSound();
 	},2300)

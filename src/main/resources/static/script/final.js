@@ -1,3 +1,23 @@
+	(function ($) {
+	    $.extend({
+	        playSound: function () {
+	            return $(
+	                   '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
+	                     + '<source src="' + arguments[0] + '" />'
+	                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
+	                   + '</audio>'
+	                 ).appendTo('body');
+	        },
+	        stopSound: function () {
+	            $(".sound-player").remove();
+	        }
+	    });
+	})(jQuery);
+	
+setTimeout(function(){
+	$.playSound('/sound/buzz.wav');
+}, 0);
+
 $('#write').typeIt({
     strings: 'Error code #211034526',
     speed: 30,
@@ -54,19 +74,8 @@ $('#write').typeIt({
 .tiPause(3000)
 .tiBreak()
 .tiSettings({speed: 200})
-.tiType('There is no hope');
-
-
-
-
-
-/*
-
-.tiBreak()
-.tiType('#117342560000')
-
-.tiPause(1000)
-.tiBreak()
-.tiType('')
-
-*/
+.tiType('There is no hope')
+.tiPause(50);
+setTimeout(function(){
+	window.location="http://www.tutorialspoint.com";
+}, 29400);

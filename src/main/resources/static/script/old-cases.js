@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 				setTimeout(function(){
 					hideAndShow();
 					body.css("background-image", "url(\"/img/oldcases.jpg\")");
-					$.playSound('http://soundbible.com/mp3/Children_Laughing-Mike_Koenig-575083331.mp3');
+					$.playSound('/sound/childlaught.mp3');
 					setTimeout(function(){
 						body.css("background-image", "");
 						hideAndShow();
