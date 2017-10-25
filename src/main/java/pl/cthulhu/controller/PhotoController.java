@@ -20,14 +20,14 @@ public class PhotoController {
 		String[] poem = null;
 		switch (name) {
 		case "whenthemoonisgone":
-			link = "https://olxpl-ring04.akamaized.net/images_tablicapl/546831588_2_644x461_lalka-lalki-sliczne-porcelana-porcelanowe-vintage-duze-stare-dekoracja-dodaj-zdjecia_rev009.jpg";
+			link = "/img/whenthemoonisgone.jpg";
 			place = "Savannah, Georgia, marzec 2006";
 			String[] str1 = {"In echoes,", "It goes,", "The silence mourns,", "A manifestation,",
 					"It'll shatter windows,", "It'll maim, it will kill,", "It will reveal"};
 			poem = str1;
 			break;
 		case "welcome":
-			link = "https://i.pinimg.com/736x/fe/c5/a7/fec5a70b0f373149ec55d4ba1e0e2221.jpg";
+			link = "/img/welcome.jpg";
 			place = "Gardner, Georgia, luty 2007";
 			
 			String[] str2 = {"Like one that on a lonesome road doth walk in fear and dread,",
@@ -37,14 +37,14 @@ public class PhotoController {
 			poem = str2;
 			break;
 		case "thecolouroutofspace":
-			link = "https://i.wpimg.pl/644x331/d.wpimg.pl/852962691-712552319/zorza-polarna.jpg";
+			link = "/img/thecolouroutofspace.jpg";
 			place = "Korgen, Norwegia, styczeń 2010";
 			String[] str3 = {"The oldest and strongest emotion of mankind is fear,", "and the oldest and strongest kind of",
 					"fear", "is the fear of", "unknown"};
 			poem = str3;
 			break;
 		case "storyofunseen":
-			link = "https://i.pinimg.com/736x/e7/d0/06/e7d006a9a265c012ace2130c04dece15--creepy-horror-gothic-horror.jpg";
+			link = "/img/storyofunseen.jpg";
 			place = "Abu Dulayq, Sudan, czerwiec 2012";
 			String[] str4 = {"Dark girl so filled with strife", "Dark Dark girl she'll take your life",
 					"Dark girl stay for a while", "Dark Dark girl she makes me smile", "Dark girl she shows no fear",
@@ -52,7 +52,7 @@ public class PhotoController {
 			poem = str4;
 			break;
 		case "double":
-			link = "http://www.teamjimmyjoe.com/wp-content/uploads/2014/11/scary-creepy-real-photos-popes-bishops-priests-glowing-eyes.jpg";
+			link = "/img/double.jpg";
 			place = "Banor Rogue, Luisiana, grudzień 2013";
 			String[] str5 = {"I want to sleep awhile,", "awhile, a minute, a century,", "but all must know that I have not died;",
 					"that there is a stable of gold in my lips;", "that I am the small friend of the West wing;", "that I am the intense shadow of my tears.",
@@ -60,7 +60,7 @@ public class PhotoController {
 			poem = str5;
 			break;
 		case "whenthetimecomes":
-			link = "https://i.ytimg.com/vi/FQwbxy0QszI/hqdefault.jpg";
+			link = "/img/whenthetimecomes.jpg";
 			place = "New Orlean, Luisiana, maj 2014";
 			String[] str6 ={"Oh mother, I can feel the soil falling over my head",
 					"See, the sea wants to take me",
@@ -70,7 +70,7 @@ public class PhotoController {
 			poem = str6;
 			break;
 		case "waiting":
-			link = "https://rpg.ambient-mixer.com/images_template/d/9/0/d908ddfba1e313d303df54f8b17985c6_full.jpg";
+			link = "/img/waiting.jpg";
 			place = "Bagna Big Branch, Luisiana, czerwiec 2014";
 			String[] str7 = {"He comes", "just look", "but close you", "r eyes", "just", "here"};
 			poem = str7;
