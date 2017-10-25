@@ -1,7 +1,5 @@
 package pl.cthulhu.controller;
 
-import javax.swing.JFrame;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -117,6 +115,11 @@ public class SecretController {
 	@GetMapping("/plan")
 	public String plan(){
 		return "files/plan";
+	}
+	
+	@GetMapping("/ErrorCode211034526ExternUsageOutOfData")
+	public String theEnd(){
+		return "final/ErrorCode#211034526ExternUsageOutOfData";
 	}
 
 }

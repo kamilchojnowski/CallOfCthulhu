@@ -82,7 +82,8 @@ document.addEventListener("DOMContentLoaded",function(event) {
 									setTimeout(function(){
 										PcMsg("UCIEKAJ");
 										setTimeout(function(){
-										}, 1500);
+											alert("done");
+										}, 1000);
 									}, 3000);
 								}, 6000);
 							}, 1438);

@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 			if(data == "T"){
 				setTimeout(function(){
 					hideAndShow();
-					body.css("background-image", "url(\"http://assets.rebelcircus.com/blog/wp-content/uploads/2016/01/o-BLACK-EYED-CHILD-facebook.jpg\")");
+					body.css("background-image", "url(\"/img/oldcases.jpg\")");
 					$.playSound('http://soundbible.com/mp3/Children_Laughing-Mike_Koenig-575083331.mp3');
 					setTimeout(function(){
 						body.css("background-image", "");
