@@ -1,16 +1,16 @@
 $('#write').typeIt({
-    strings: 'Error code #211034526,',
+    strings: 'Error code #211034526',
     speed: 30,
-    autoStart: true
+    autoStart: true,
 })
 .tiPause(500)
 .tiBreak()
-.tiType('Error couse: ExternUsageOutOfData.')
+.tiType('Error couse: ExternUsageOutOfData')
 .tiPause(1000)
 .tiBreak()
 .tiType('System force close of process(es):')
 .tiPause(1000)
-.tiSettings({Speed: 0})
+.tiSettings({speed: 0})
 .tiBreak()
 .tiType('#117342560000')
 .tiBreak()
@@ -26,15 +26,35 @@ $('#write').typeIt({
 .tiBreak()
 .tiType('#102300060002')
 .tiBreak()
-.tiType('#000000000000')
+.tiType('#100000000000')
 .tiBreak()
-.tiType('#000000000001')
-.tiSettings({Speed: 30})
+.tiType('#100000000001')
+.tiSettings({speed: 30})
 .tiPause(1000)
 .tiBreak()
-.tiType('There is no hope')
-
-
+.tiType('System forced to execute Error Statement Configuration')
+.tiPause(1000)
+.tiBreak()
+.tiType('System forced to close inner-process #002')
+.tiPause(1000)
+.tiBreak()
+.tiType('System forced to close inner-process #001')
+.tiPause(1000)
+.tiBreak()
+.tiType('System forced to execute Error Secure Procedure')
+.tiPause(1000)
+.tiBreak()
+.tiType('System forced to exterminate Users')
+.tiPause(1000)
+.tiBreak()
+.tiType('System forced to exterminate Admin Users')
+.tiPause(2000)
+.tiBreak()
+.tiType('System forced to exterminate System')
+.tiPause(3000)
+.tiBreak()
+.tiSettings({speed: 200})
+.tiType('There is no hope');
 
 
 
