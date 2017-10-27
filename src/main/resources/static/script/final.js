@@ -87,7 +87,7 @@ span.typeIt({
 .tiPause(50);
 
 setTimeout(function(){
-	span.toggle("hidden");
+	span.hide();
 	body.css("background-image", "url('http://i48.tinypic.com/v7z7g3.png')")
     setInterval(function() {
         
@@ -100,4 +100,4 @@ setTimeout(function(){
         });
         
     }, 90);
-}, 29400);
+}, 30000);

@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	var index = 0;
 	var on = false;
 	var body = $("body");
+	var wrapper = $("#wrapper");
 	//
 	
 	function PcMsg (message){
@@ -76,9 +77,9 @@ document.addEventListener("DOMContentLoaded",function(event) {
 					setTimeout(function(){
 						PcMsg("Musisz uciekać!");
 						setTimeout(function(){
-							PcMsg("Pomóż mi");
+							PcMsg("pomóż mi");
 							setTimeout(function(){
-								PcMsg("Błagam");
+								PcMsg("błagamm");
 								setTimeout(function(){
 									PcMsg("On nadchodzi");
 									setTimeout(function(){
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 										}, 1000);
 									}, 3000);
 								}, 4500);
-							}, 1438);
+							}, 1000);
 						}, 1985);
 					}, 2651);
 				}, 2315);
@@ -110,13 +111,28 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		
 	}
 	
+	function initialize(){
+		Color("black", 100);
+		Color("darkblue", 200);
+		Color("black", 300);
+		Color("darkblue", 400);
+		Color("black", 500);
+		Color("darkblue", 600);
+		Color("black", 700);
+		Color("darkblue", 800);
+		setTimeout(function(){
+			wrapper.show();
+		}, 800);
+		
+	}
+	
 	function errorImitation(time){
-		$("#wrapper").hide();
+		wrapper.hide();
 		Color("black", time + 100);
-		Color("darkblue", time + 200);
+		Color("darkred", time + 200);
 		Img("url('/img/error/1.jpg')", time + 300);
 		Img("url('/img/error/2.jpg')", time + 400);
-		Color("darkred", time + 500);
+		Color("darkblue", time + 500);
 		Img("url('/img/error/3.jpg')", time + 500);
 		Color("darkyellow", time + 600);
 		Color("darkred", time + 700);
@@ -125,7 +141,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		Img("url('/img/error/5.jpg')", time + 1100);
 		Color("black", time + 1200);
 		Img("url('/img/error/6.jpg')", time + 1300);
-		Img("url('/img/error/7.png')", time + 1400);
+		Img("url('/img/error/eyes.png')", time + 1400);
 		Color("blue", time + 2400);
 		setTimeout(function(){
 			window.location="/ErrorCode211034526ExternUsageOutOfData";
@@ -144,7 +160,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	
 	//js
 	$(submitmsg).click(BgMsg);
-	//PcAction(index);
-	errorImitation(0);
+	initialize();
+	PcAction(index);
 });
 	
