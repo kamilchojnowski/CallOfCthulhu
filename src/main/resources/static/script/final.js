@@ -1,4 +1,7 @@
-	(function ($) {
+var body = $("body");
+var span = $("#write");
+
+(function ($) {
 	    $.extend({
 	        playSound: function () {
 	            return $(
@@ -18,7 +21,13 @@ setTimeout(function(){
 	$.playSound('/sound/buzz.wav');
 }, 0);
 
-$('#write').typeIt({
+function rand (min, max) {      
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//js
+
+span.typeIt({
     strings: 'Error code #211034526',
     speed: 30,
     autoStart: true,
@@ -76,6 +85,19 @@ $('#write').typeIt({
 .tiSettings({speed: 200})
 .tiType('There is no hope')
 .tiPause(50);
+
 setTimeout(function(){
-	window.location="http://www.tutorialspoint.com";
+	span.toggle("hidden");
+	body.css("background-image", "url('http://i48.tinypic.com/v7z7g3.png')")
+    setInterval(function() {
+        
+        var randPosOne = rand(0,200),
+            randPosTwo = rand(0,200),
+            bgPosition = randPosOne + 'px ' + randPosTwo + 'px';
+        
+        body.css({
+            "background-position": bgPosition
+        });
+        
+    }, 90);
 }, 29400);

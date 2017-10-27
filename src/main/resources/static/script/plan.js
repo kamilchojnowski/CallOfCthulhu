@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	var msg = $("#msg");
 	var index = 0;
 	var on = false;
-	//
 	var body = $("body");
+	//
 	
 	function PcMsg (message){
 		var temp = "From '" + PC.bold() + "': " + message + "<br>" ;
@@ -84,11 +84,10 @@ document.addEventListener("DOMContentLoaded",function(event) {
 									setTimeout(function(){
 										PcMsg("UCIEKAJ");
 										setTimeout(function(){
-											//window.location="/ErrorCode211034526ExternUsageOutOfData";
-											errorImitation();
+											errorImitation(0);
 										}, 1000);
 									}, 3000);
-								}, 6000);
+								}, 4500);
 							}, 1438);
 						}, 1985);
 					}, 2651);
@@ -97,9 +96,40 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		}
 	}
 	
-	function errorImitation(){
+	function Color(color, time){
+		setTimeout(function(){
+			body.css("background-image", "");
+			body.css("background-color", color);
+		}, time)
+	}
+	
+	function Img(url, time){
+		setTimeout(function(){
+			body.css("background-image", url);
+		}, time)
+		
+	}
+	
+	function errorImitation(time){
 		$("#wrapper").hide();
-		body.css("background-image", "url('/img/lighthouse.jpg')");
+		Color("black", time + 100);
+		Color("darkblue", time + 200);
+		Img("url('/img/error/1.jpg')", time + 300);
+		Img("url('/img/error/2.jpg')", time + 400);
+		Color("darkred", time + 500);
+		Img("url('/img/error/3.jpg')", time + 500);
+		Color("darkyellow", time + 600);
+		Color("darkred", time + 700);
+		Img("url('/img/error/4.jpg')", time + 800);
+		Color("darkgray", time + 1000);
+		Img("url('/img/error/5.jpg')", time + 1100);
+		Color("black", time + 1200);
+		Img("url('/img/error/6.jpg')", time + 1300);
+		Img("url('/img/error/7.png')", time + 1400);
+		Color("blue", time + 2400);
+		setTimeout(function(){
+			window.location="/ErrorCode211034526ExternUsageOutOfData";
+		}, time + 3400)
 	}
 	
 	$(msg).keypress(function(e) {
@@ -114,6 +144,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	
 	//js
 	$(submitmsg).click(BgMsg);
-	PcAction(index);
+	//PcAction(index);
+	errorImitation(0);
 });
 	
