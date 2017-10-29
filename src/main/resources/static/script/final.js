@@ -98,6 +98,14 @@ setTimeout(function(){
         body.css({
             "background-position": bgPosition
         });
-        
     }, 90);
+	setTimeout(function(){
+        $.ajax({
+        	url: "/end",
+        	dataType : "text",
+        	success: function(){
+        		alert("s");
+        	}
+        })
+	}, 3000);
 }, 30000);

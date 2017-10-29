@@ -160,7 +160,8 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	
 	//js
 	$(submitmsg).click(BgMsg);
-	initialize();
-	PcAction(index);
+	//initialize();
+	//PcAction(index);
+	errorImitation(0);
 });
 	

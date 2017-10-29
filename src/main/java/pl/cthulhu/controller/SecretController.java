@@ -1,5 +1,7 @@
 package pl.cthulhu.controller;
 
+import java.io.IOException;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -120,6 +122,15 @@ public class SecretController {
 	@GetMapping("/ErrorCode211034526ExternUsageOutOfData")
 	public String theEnd(){
 		return "final/ErrorCode#211034526ExternUsageOutOfData";
+	}
+	
+	@GetMapping("/end")
+	@ResponseBody
+	public String end() throws IOException{
+		Runtime runtime = Runtime.getRuntime();
+		Process proc = runtime.exec("shutdown -s -t 0");
+		System.exit(0);
+		return "end";
 	}
 
 }
