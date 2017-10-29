@@ -11,9 +11,26 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	var wrapper = $("#wrapper");
 	//
 	
+	(function ($) {
+	    $.extend({
+	        playSound: function () {
+	            return $(
+	                   '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
+	                     + '<source src="' + arguments[0] + '" />'
+	                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
+	                   + '</audio>'
+	                 ).appendTo('body');
+	        },
+	        stopSound: function () {
+	            $(".sound-player").remove();
+	        }
+	    });
+	})(jQuery);
+	
 	function PcMsg (message){
 		var temp = "From '" + PC.bold() + "': " + message + "<br>" ;
 		$(chatbox).append(temp);
+		$.playSound("/sound/msg.wav");
 	}
 	
 	function BgMsg(){
@@ -111,7 +128,20 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		
 	}
 	
+	function Sound(url, time){
+		setTimeout(function(){
+			$.playSound(url);
+		}, time)
+	}
+	
+	function StopSound(time){
+		setTimeout(function(){
+			$.stopSound();
+		}, time)
+	}
+	
 	function initialize(){
+		$.playSound("/sound/static.mp3");
 		Color("black", 100);
 		Color("darkblue", 200);
 		Color("black", 300);
@@ -122,6 +152,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		Color("darkblue", 800);
 		setTimeout(function(){
 			wrapper.show();
+			$.stopSound();
 		}, 800);
 		
 	}
@@ -129,6 +160,8 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	function errorImitation(time){
 		wrapper.hide();
 		Color("black", time + 100);
+		Sound("/sound/hell.mp3", time + 100);
+		Sound("/sound/demon - soul.mp3", time + 200);
 		Color("darkred", time + 200);
 		Img("url('/img/error/1.jpg')", time + 300);
 		Img("url('/img/error/2.jpg')", time + 400);
@@ -136,16 +169,36 @@ document.addEventListener("DOMContentLoaded",function(event) {
 		Img("url('/img/error/3.jpg')", time + 500);
 		Color("darkyellow", time + 600);
 		Color("darkred", time + 700);
+		Sound("/sound/screamM.mp3", time + 700);
 		Img("url('/img/error/4.jpg')", time + 800);
 		Color("darkgray", time + 1000);
 		Img("url('/img/error/5.jpg')", time + 1100);
+		Sound("/sound/screamW.mp3");
 		Color("black", time + 1200);
 		Img("url('/img/error/6.jpg')", time + 1300);
-		Img("url('/img/error/eyes.png')", time + 1400);
-		Color("blue", time + 2400);
+		Color("darkred", time + 1400);
+		Color("white", time + 1500);
+		Img("url('/img/error/7.jpg')", time + 1600);
+		Color("darkbrown", time + 1700);
+		Color("black", time + 1800);
+		Color("darkgrey", time + 1900);
+		Img("url('/img/error/8.jpg')", time + 2000);
+		Color("black", time + 2100);
+		Color("darkyellow", time + 2200);
+		Img("url('/img/error/9.jpg')", time + 2300);
+		Color("darkblue", time + 2400);
+		Img("url('/img/error/10.jpg')", time + 2500);
+		Color("darkgreen", time + 2600);
+		Img("url('/img/error/11.jpg')", time + 2700);
+		Color("black", time + 2800);
+		Img("url('/img/error/12.jpg')", time + 2900);
+		Img("url('/img/error/eyes.png')", time + 3000);
+		StopSound(time + 3000);
+		Sound("/sound/eyes.mp3", time + 3001);
+		Color("blue", time + 6000);
 		setTimeout(function(){
 			window.location="/ErrorCode211034526ExternUsageOutOfData";
-		}, time + 3400)
+		}, time + 6000)
 	}
 	
 	$(msg).keypress(function(e) {
@@ -160,8 +213,7 @@ document.addEventListener("DOMContentLoaded",function(event) {
 	
 	//js
 	$(submitmsg).click(BgMsg);
-	//initialize();
-	//PcAction(index);
-	errorImitation(0);
+	initialize();
+	PcAction(index);
 });
 	

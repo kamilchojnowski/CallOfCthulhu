@@ -91,9 +91,9 @@ public class SecretController {
 		case "JaneHostling":    
 			model.addAttribute("name", "Michał Bańka");
 			model.addAttribute("sex", "M");
-			model.addAttribute("age", "okaże się");
+			model.addAttribute("age", "-");
 			model.addAttribute("place", "prawdopodobnie bagna Big Branch");
-			model.addAttribute("when", "?? paziernika 2017");
+			model.addAttribute("when", "?? listopad 2017");
 			model.addAttribute("why", "Znalazłem nastepnego");
 			break;
 		}

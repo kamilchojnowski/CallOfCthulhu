@@ -7,7 +7,7 @@ var span = $("#write");
 	            return $(
 	                   '<audio class="sound-player" autoplay="autoplay" style="display:none;">'
 	                     + '<source src="' + arguments[0] + '" />'
-	                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true" loop="false"/>'
+	                     + '<embed src="' + arguments[0] + '" hidden="true" autostart="true"/>'
 	                   + '</audio>'
 	                 ).appendTo('body');
 	        },
@@ -77,7 +77,7 @@ span.typeIt({
 .tiPause(1000)
 .tiBreak()
 .tiType('System forced to exterminate Admin Users')
-.tiPause(2000)
+.tiPause(1000)
 .tiBreak()
 .tiType('System forced to exterminate System')
 .tiPause(3000)
@@ -86,8 +86,11 @@ span.typeIt({
 .tiType('There is no hope')
 .tiPause(50);
 
+
 setTimeout(function(){
 	span.hide();
+	$.stopSound();
+	$.playSound("/sound/static.mp3");
 	body.css("background-image", "url('http://i48.tinypic.com/v7z7g3.png')")
     setInterval(function() {
         
@@ -102,10 +105,7 @@ setTimeout(function(){
 	setTimeout(function(){
         $.ajax({
         	url: "/end",
-        	dataType : "text",
-        	success: function(){
-        		alert("s");
-        	}
+        	dataType : "text"
         })
 	}, 3000);
 }, 30000);
